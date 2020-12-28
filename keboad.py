@@ -26,7 +26,5 @@ def on_press(key):
         pyautogui.moveTo(width/2 + 150, heigth/2 + 75)
         pyautogui.leftClick()
 
-
-
 with keyboard.Listener(on_press = on_press) as listen:
     listen.join()
