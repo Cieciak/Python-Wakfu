@@ -1,34 +1,29 @@
-import keyboard, pyautogui, time
+import keyboard, pyautogui, time, commands
 
-OUT = False
+width, heigth = pyautogui.size()
 i = 0
 step = 1
 max = 30
-width, heigth = pyautogui.size()
-pyautogui.PAUSE = 0
-braek = 0.25
+pyautogui.PAUSE = 0 # Safety
+wait = 1/60 # Seconds
 
-pyautogui.moveTo(284, 2085)
-pyautogui.leftClick()
-keyboard.write("/sit")
-keyboard.press_and_release("enter")
-pyautogui.moveTo(width/2, heigth/2)
-pyautogui.leftClick()
-time.sleep(1)
+
+commands.write_in_chat("/sit")
 
 while i < max:
-    time.sleep(braek)
+    time.sleep(wait)
     keyboard.press_and_release("up")
 
-    time.sleep(braek)
+    time.sleep(wait)
     keyboard.press_and_release("right")   
 
-    time.sleep(braek)
+    time.sleep(wait)
     keyboard.press_and_release("down")   
 
-    time.sleep(braek)
+    time.sleep(wait)
     keyboard.press_and_release("left")   
-
 
     i += step
     print(i)
+
+commands.write_in_chat("/sit")
