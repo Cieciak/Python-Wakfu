@@ -3,15 +3,15 @@ import keyboard, pyautogui, time, commands
 width, heigth = pyautogui.size()
 i = 0
 step = 1
-max = 30
+max = 300
 pyautogui.PAUSE = 0 # Safety
-wait = 1/20 # Seconds
+wait = 1/100 # Seconds
 
 
 commands.write_in_chat("/sit")
-
+time.sleep(1)
 pyautogui.leftClick(width/2, heigth/2)
-time.wait(1)
+
 
 while i < max:
     time.sleep(wait)
@@ -28,5 +28,3 @@ while i < max:
 
     i += step
     print(i)
-
-commands.write_in_chat("/sit")
