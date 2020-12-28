@@ -11,6 +11,7 @@ wait = 1/20 # Seconds
 commands.write_in_chat("/sit")
 
 pyautogui.leftClick(width/2, heigth/2)
+time.wait(1)
 
 while i < max:
     time.sleep(wait)
