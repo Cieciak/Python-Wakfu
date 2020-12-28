@@ -5,10 +5,12 @@ i = 0
 step = 1
 max = 30
 pyautogui.PAUSE = 0 # Safety
-wait = 1/60 # Seconds
+wait = 1/20 # Seconds
 
 
 commands.write_in_chat("/sit")
+
+pyautogui.leftClick(width/2, heigth/2)
 
 while i < max:
     time.sleep(wait)
